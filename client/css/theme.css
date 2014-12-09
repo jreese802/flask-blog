@@ -1,5 +1,4 @@
 /*
- * from http://getbootstrap.com/examples/blog/
  * Globals
  */
  
@@ -15,8 +14,7 @@ h4, .h4,
 h5, .h5,
 h6, .h6 {
     margin-top: 0;
-    font-family: "Helvetica Neue", Helvetica, Arial, 
-sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: normal;
     color: #333;
 }
@@ -40,8 +38,7 @@ sans-serif;
 .blog-masthead {
     background-color: #428bca;
     -webkit-box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
-                    box-shadow: inset 0 -2px 5px 
-rgba(0,0,0,.1);
+                    box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
 }
  
 /* Nav links */

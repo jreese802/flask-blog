@@ -17,9 +17,9 @@ class UserCreateForm(ModelForm):
   class Meta: 
     model = User
 
-    calss SessionCreateForm(Form):
-    email = StringField('email', validators=[DataRequired()])
-    password = StringField('password', validators=[DataRequired()])
+    class SessionCreateForm(Form):
+      email = StringField('email', validators=[DataRequired()])
+      password = StringField('password', validators=[DataRequired()])
 
 class PostCreateForm(ModelForm):
   class Meta:

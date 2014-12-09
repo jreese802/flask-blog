@@ -1,12 +1,12 @@
 from flask import g
 
-from wttforms.validators import Email
+from wtforms.validators import Email
 from server import db,flask_bcrypt
 
 class User(db.Model):
   id = db.Column(db.Integer, primary_key=True)
   email = db.Column(db.String(120), unique=True, nullable=False, info={'validators': Email()})
-  password = bd.Colunm(db.String(80), nullable=False)
+  password = db.Column(db.String(80), nullable=False)
   posts = db.relationship('Post', backref='user', lazy='dynamic')
 
   def __init__(self,email,password):
@@ -17,8 +17,8 @@ class User(db.Model):
     return '<User {}>'.format(self.email)
 
 class Post(db.Model):
-  id = db.Colunm(db.Integer, primary_key=True)
-  title = db.Colunm(db.String(120), nullable=False)
+  id = db.Column(db.Integer, primary_key=True)
+  title = db.Column(db.String(120), nullable=False)
   body = db.Column(db.Text, nullable=False)
   user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
   created_at = db.Column(db.DateTime, default=db.func.now())
